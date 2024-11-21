@@ -1,0 +1,276 @@
+.rubik-bubbles-regular {
+    font-family: "Rubik Bubbles", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* Definindo a animação */
+@keyframes girar {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+/* Geral */
+body {
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+    background: #f8f9fa; /* Cor clara para o fundo */
+   
+
+}
+
+/* Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #007BFF; /* Azul chamativo */
+    color: #bdfe01;
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+/* Navegação */
+nav {
+    margin-top: 80px; /* Empurra para baixo, abaixo do cabeçalho */
+    background-color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaço entre os itens */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: #007BFF;
+}
+
+/* Conteúdo Principal */
+main {
+    margin-top: 10px;
+    padding: 10px;
+    position: relative;
+}
+
+main h2 {
+    font-size: 2em;
+    color: #007BFF;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: center;
+    color: #555;
+}
+
+/* Logo Principal */
+.principal{
+   max-width: 1300px;
+   margin: 1px auto;
+   display: flex;
+   align-items: center;
+   gap: 30px;
+}
+
+.logo{
+    width: 100px;
+    height: 100px;
+    animation: girar 10s linear infinite;
+}
+
+/*Informações de Contato*/
+.informacaoContato{
+    text-align: center;
+    margin: 1px;
+    align-items: center;
+    gap: 30px;
+}
+
+.informacaoContato p{
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Conteúdo de Destaques */
+.conteudoh3 {
+    max-width: 1300px;
+    margin: 20px auto;
+    color: black;
+    background-color: #f8f9fa;
+}
+
+/* Contêiner de flexbox para os itens */
+.conteudos {
+    display: flex; /* Ativa o layout flexbox */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    align-items: flex-start; /* Alinha os itens no topo */
+    gap: 20px; /* Espaço entre os itens */
+    margin: 20px auto; /* Espaçamento externo e centralização automática */
+    flex-wrap: wrap; /* Permite quebrar linha quando necessário */
+    max-width: 1300px; /* Limita a largura máxima do contêiner */
+    padding: 10px; /* Margem interna para o contêiner */
+}
+
+/* Estilo de cada item dentro do flexbox */
+.conteudos .conteudo {
+    flex: 1 1 30%; /* Permite flexibilidade e largura inicial de 30% */
+    max-width: 30%; /* Garante que não ultrapasse 30% da largura */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto; /* Ajuste a altura de forma automática */
+    width: 100%; /* Ajusta para usar toda a largura disponível do flex */
+}
+
+/* Estilo para as imagens dentro de cada item */
+.conteudos .conteudo img {
+    width: 100%; /* As imagens ocupam toda a largura do contêiner individual */
+    height: auto; /* Mantém a proporção */
+    border-radius: 8px; /* Deixa as bordas arredondadas */
+}
+
+/* Alterações ao passar o mouse sobre os itens */
+.conteudos .conteudo:hover {
+    transform: translateY(-5px); /* Efeito de movimento ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombras mais intensas */
+}
+
+
+/* Container para noticias e destaques */
+.conteudosND {
+    display: flex; /* Ativa o layout flexbox */
+    flex-direction: column; /* Organiza os itens em uma coluna (um abaixo do outro) */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaço entre os itens */
+    margin: 20px auto; /* Espaçamento externo e centralização automática */
+    max-width: 1300px; /* Limita a largura máxima do contêiner */
+    padding: 10px; /* Margem interna para o contêiner */
+}
+
+/* Estilo de cada item dentro do flexbox */
+.conteudosND .conteudoND {
+    display: flex; /* Layout flexbox horizontal para imagem e texto */
+    align-items: center; /* Alinha verticalmente a imagem e o texto */
+    justify-content: space-between; /* Distribui o conteúdo (imagem e texto) com espaço entre eles */
+    max-width: 30%; /* Limita a largura máxima do item */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto; /* Ajuste a altura de forma automática */
+    width: 100%; /* Ajusta para usar toda a largura disponível do flex */
+}
+
+/* Estilo das imagens */
+.conteudosND .conteudoND img {
+    width: 100%; /* Defina um tamanho fixo ou responsivo para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Deixa as bordas arredondadas */
+    margin-right: 15px; /* Adiciona espaço entre a imagem e o texto */
+}
+
+/* Estilo do parágrafo */
+.conteudosND .conteudoND p {
+    margin: 0; /* Remove margem extra */
+    color: black; /* Cor do texto */
+    font-size: 16px; /* Tamanho do texto */
+}
+
+/* Alterações ao passar o mouse sobre os itens */
+.conteudosND .conteudoND:hover {
+    transform: translateY(-5px); /* Efeito de movimento ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombras mais intensas */
+}
+
+
+.maisNoticias{
+    display: flex; /* Ativa o layout flexbox */
+    flex-direction: column; /* Organiza os itens em uma coluna (um abaixo do outro) */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaço entre os itens */
+    margin: 20px auto; /* Espaçamento externo e centralização automática */
+    max-width: 1300px; /* Limita a largura máxima do contêiner */
+    padding: 10px; /* Margem interna para o contêiner */
+    text-align: center;
+}
+
+.maisNoticias .maisNoticia{
+    display: flex; /* Layout flexbox horizontal para imagem e texto */
+    align-items: center; /* Alinha verticalmente a imagem e o texto */
+    justify-content: space-between; /* Distribui o conteúdo (imagem e texto) com espaço entre eles */
+    max-width: 100%; /* Limita a largura máxima do item */
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    background-color: white;
+    border-radius: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: auto; /* Ajuste a altura de forma automática */
+    width: 100%; /* Ajusta para usar toda a largura disponível do flex */
+}
+
+.maisNoticias .maisNoticia img{
+    width: 100%; /* Defina um tamanho fixo ou responsivo para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Deixa as bordas arredondadas */
+    margin-right: 15px; /* Adiciona espaço entre a imagem e o texto */
+}
+
+.maisNoticias h3{
+    color: #007BFF;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
